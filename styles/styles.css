@@ -1,0 +1,123 @@
+/* ==========================================
+   RESET & ESTILOS GLOBALES
+========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: rgb(0, 0, 1);
+    line-height: 1.6;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+
+}
+
+/* ==========================================
+ ESTILOS GENERALES PARA BOTONES
+   (Usados en todas las páginas)
+========================================== */
+
+button {
+    padding: 10px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #0071e3;
+    color: aliceblue;
+    border-radius: 980px;
+    margin: 20px 10px 0 10px;
+
+}
+
+button:hover {
+    background-color: rgb(149, 149, 149);
+    color: rgb(255, 255, 255);
+}
+
+/* ==========================================
+   INDEX.HTML — Página principal
+========================================== */
+
+header {
+    padding-top: 80px;
+    line-height: 40px;
+}
+
+main {
+    flex-grow: 1;
+    padding: 5px;
+    color: #6e6e73;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ==========================================
+   FORMULARIOS (login y register)
+========================================== */
+
+.login-container,
+.register-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.form-group {
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #6e6e73;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #6e6e73;
+}
+
+input:focus {
+    border-color: #0077cc;
+}
+
+/* TEXTO DEBAJO DEL FORMULARIO LOGIN-REGISTER*/
+p {
+    margin-top: 1rem;
+    text-align: center;
+    color: #6e6e73;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

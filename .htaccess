@@ -1,0 +1,3 @@
+# Desactiva las redirecciones de WordPress solo en esta carpeta
+Options +FollowSymLinks
+RewriteEngine Off

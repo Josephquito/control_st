@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-sacale=1.0">
+        <title>Rgistarse - Control Streaming</title>
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+      <div class="register-container">
+        <h1>Crea tu cuenta</h1>
+        <form id="register-form" action="php/register.php" method="POST">
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Ejm. Carlos Cortez" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electronico</label>
+                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>                            
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="**********" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+593 987 6543 321" required>
+            </div>
+            <button type="submit">Crear cuenta</button>
+        </form>
+        <p>¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesion</a></p>
+      </div>
+      <script src="scripts/scripts.js"></script>
+    </body>
+</html>
