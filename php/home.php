@@ -17,7 +17,7 @@ if (!isset($_SESSION['usuario'])) {
     </head>
     <body>
         <header>
-            <a href="php/logout.php">Cerrar sesión</a>
+            <a href="logout.php">Cerrar sesión</a>
             <h1>Sistema de cuentas de Streaming</h1>
             <h2>Bienvenido, <?php echo $_SESSION['usuario']; ?> 🎉</h2>
         </header>
