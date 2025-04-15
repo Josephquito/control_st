@@ -26,7 +26,7 @@ if ($resultado->num_rows === 1) {
         $_SESSION['usuario'] = $usuario['nombre'];
         $_SESSION['correo'] = $usuario['correo'];
 
-        header("Location: ../home.php");
+        header("Location: /home.php");
         exit();
 
         } else {
