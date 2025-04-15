@@ -1,3 +1,12 @@
+<?php 
+session_start();
+
+if (!isset($_SESSION['usuario'])) {
+    header("Location: login.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -8,7 +17,8 @@
     </head>
     <body>
         <header>
-            <h1>Bienvenido a tu <br> Sistema de cuentas de Streaming</h1>
+            <h1>Sistema de cuentas de Streaming</h1>
+            <h2>Bienvenido, <?php echo $_SESSION['usuario']; ?> 🎉</h2>
         </header>
     </body>
 </html>
