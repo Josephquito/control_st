@@ -171,12 +171,25 @@ a:hover {
     height: 35px;
     object-fit: contain;
 }
+/* Íconos */
+.icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin-right: 10px;
+}
 
-/* Tooltip base */
+/* Texto visible cuando expandido */
 .text-label {
     margin-left: 10px;
 }
 
+/* Ocultar texto normal en sidebar colapsado */
+.sidebar.colapsada .text-label {
+    display: none !important;
+}
+
+/* Tooltip oculto por defecto */
 .tooltip-text {
     position: absolute;
     left: 60px;
@@ -192,15 +205,19 @@ a:hover {
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 100;
+    pointer-events: none;
+    background-color: red !important;
+    left: 0 !important;
+    top: 0 !important;
 }
 
-/* Mostrar el tooltip SOLO cuando sidebar esté colapsado y hay hover */
+/* Mostrar tooltip SOLO cuando sidebar está colapsado y hay hover */
+.sidebar.colapsada .nav-link {
+    position: relative;
+    justify-content: center;
+}
+
 .sidebar.colapsada .nav-link:hover .tooltip-text {
     opacity: 1;
     visibility: visible;
-}
-
-/* Oculta el texto regular del menú, pero NO el tooltip */
-.sidebar.colapsada .text-label {
-    display: none !important;
 }
