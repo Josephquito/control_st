@@ -152,9 +152,14 @@ a:hover {
     width: 60px;
 }
 
+.sidebar-header {
+    padding: 20px 15px;
+}
+
 .sidebar-header h2 {
-    margin-bottom: 30px;
+    margin: 0;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .sidebar.colapsada .sidebar-header h2 {
@@ -264,13 +269,8 @@ a:hover {
 ========================================== */
 
 .contenido {
-    margin-left: 220px;
+    margin-left: 220px; 
     padding: 40px;
     width: calc(100% - 220px);
     transition: margin-left 0.3s ease, width 0.3s ease;
-}
-
-.sidebar.colapsada + .contenido {
-    margin-left: 60px;
-    width: calc(100% - 60px);
 }
