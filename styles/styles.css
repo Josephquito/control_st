@@ -203,4 +203,5 @@ a:hover {
 .sidebar.colapsada .nav-link:hover .tooltip-text {
     opacity: 1;
     visibility: visible;
+    left: 60px;
 }
