@@ -11,14 +11,14 @@ if (!isset($_SESSION['usuario'])) {
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-sacale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Control Streaming</title>
-        <link rel="stylesheet" href="../styles/styles.css"> 
+        <link rel="stylesheet" href="/styles/styles.css"> 
     </head>
     <body>
         <div class="sidebar">
             <div class="sidebar-header">
-                <h2><?php echo $_SESSION['usuario'];?><h2>
+                <h2><?php echo $_SESSION['usuario']; ?><h2>
             </div>
         <nav class="menu">
             <a class="nav-link" href="#">

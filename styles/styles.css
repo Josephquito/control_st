@@ -139,7 +139,7 @@ a:hover {
     font-weight: bold;
 }
 
-.menu, .sidebar-botton {
+.menu, .sidebar-bottom {
     display: flex;
     flex-direction: column;
 }
@@ -151,7 +151,7 @@ a:hover {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    transition: 0,3s;
+    transition: 0.3s;
 }
 
 .nav-link:hover{
