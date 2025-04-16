@@ -15,7 +15,7 @@ if (!isset($_SESSION['usuario'])) {
         <title>Control Streaming</title>
         <link rel="stylesheet" href="/styles/styles.css"> 
     </head>
-    <body>
+    <body class="home-body">
         <div class="sidebar">
             <div class="sidebar-header">
                 <h2><?php echo $_SESSION['usuario']; ?><h2>
