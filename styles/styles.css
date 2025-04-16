@@ -162,22 +162,42 @@ a:hover {
     margin-right: 20px;
 }
 
-.menu, .sidebar-bottom {
-    display: flex;
-    flex-direction: column;
-}
-
 .nav-link {
+    position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    font-size: 20px;
+    padding: 10px 15px;
     text-decoration: none;
     color: #333;
-    font-weight: 500;
-    transition: 0.3s;
 }
 
-.nav-link:hover{
-    color: #0071e3;
+.nav-link .tooltip-text {
+    display: inline-block;
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.colapsada .nav-link {
+    justify-content: center;
+}
+
+.sidebar.colapsada .nav-link .tooltip-text {
+    position: absolute;
+    left: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 13px;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.colapsada .nav-link:hover .tooltip-text {
+    opacity: 1;
 }
