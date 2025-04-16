@@ -151,7 +151,7 @@ a:hover {
 }
 
 .sidebar-colapsada .nav-link span, 
-.sidebar-colapsada .sidebar-header h2 {
+.sidebar-colapsada, .sidebar-header h2 {
     display: none !important;
 }
 
