@@ -122,6 +122,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* MENU */
 .home-body {
     display: flex;
     min-height: 100vh;
@@ -172,7 +173,7 @@ a:hover {
     height: 35px;
     object-fit: contain;
 }
-/* Íconos */
+/* Íconos menu */
 .icon {
     width: 35px;
     height: 35px;
@@ -180,12 +181,10 @@ a:hover {
     margin-right: 10px;
 }
 
-/* Texto visible cuando expandido */
 .text-label {
     margin-left: 10px;
 }
 
-/* Ocultar texto normal en sidebar colapsado */
 .sidebar.colapsada .text-label {
     display: none !important;
 }
@@ -207,12 +206,11 @@ a:hover {
     transition: all 0.3s ease;
     z-index: 100;
     pointer-events: none;
-    left: 55px; /* o prueba con 60px */
+    left: 55px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-/* Mostrar tooltip SOLO cuando sidebar está colapsado y hay hover */
 .sidebar.colapsada .nav-link {
     position: relative;
     justify-content: center;
@@ -221,4 +219,35 @@ a:hover {
 .sidebar.colapsada .nav-link:hover .tooltip-text {
     opacity: 1;
     visibility: visible;
+}
+
+/* Sub menu "Mas"*/
+.dropdown-menu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 200;
+    min-width: 150px;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.sidebar.colapsada .dropdown-menu {
+    left: 60px;
 }

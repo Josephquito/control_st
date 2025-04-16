@@ -47,12 +47,15 @@ if (!isset($_SESSION['usuario'])) {
                 <span class="tooltip-text">Ganancias</span>
             </a>
         </nav>
-            <div class="sidebar-bottom">
-                <a class="nav-link" href="#">
-                    <img src="../assets/menu.png" alt="Menu" class="icon"> 
-                    <span class="text-label">Más</span>
-                    <span class="tooltip-text">Más</span>
-                </a>
+            <div class="nav-link dropdown-toggle" id="btn-mas">
+                <img src="../assets/menu.png" alt="Menu" class="icon"> 
+                <span class="text-label">Más</span>
+                <span class="tooltip-text">Más</span>
+
+                <div>
+                    <a href="#" class="dropdown-item">Mi Perfil</a>
+                    <a href="../php/logout.php" class="dropdown-item">Cerrar sesión</a>
+                </div>
             </div>
         </div>
         <script src="../scripts/scripts.js"></script>

@@ -20,3 +20,15 @@ links.forEach(link => {
         }
     });
 });
+
+const btmMas = document.getElementById('btn-mas');
+const menuMas = document.getElementById('menu-mas');
+
+btnMas.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menuMas.style.display = menuMas.style.display === 'bloclk' ? 'none' : 'block';
+});
+
+document.addEventListener('click', ()=> {
+    menuMas.style.display = 'none';
+});
