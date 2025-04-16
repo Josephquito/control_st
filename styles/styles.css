@@ -251,3 +251,13 @@ a:hover {
 .sidebar.colapsada .dropdown-menu {
     left: 60px;
 }
+
+/* ==========================================
+   CONTENIDO DE LAS PAGINAS
+========================================== */
+
+.contenido {
+    flex-grow: 1;
+    padding: 40px;
+    text-align: center;
+}
