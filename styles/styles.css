@@ -137,7 +137,7 @@ a:hover {
     justify-content: space-between;
     border-right: 1px solid #e0e0e0;
     transition: width 0.3s ease;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .sidebar.colapsada {
@@ -164,6 +164,7 @@ a:hover {
 
 .sidebar.colapsada .nav-link {
     justify-content: center;
+    position: relative;
 }
 
 .icon {
@@ -206,9 +207,9 @@ a:hover {
     transition: all 0.3s ease;
     z-index: 100;
     pointer-events: none;
-    background-color: red !important;
-    left: 0 !important;
-    top: 0 !important;
+    left: 55px; /* o prueba con 60px */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Mostrar tooltip SOLO cuando sidebar está colapsado y hay hover */
