@@ -16,9 +16,9 @@ if (!isset($_SESSION['usuario'])) {
         <link rel="stylesheet" href="/styles/styles.css"> 
     </head>
     <body class="home-body">
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <h2><?php echo $_SESSION['usuario']; ?><h2>
+                <h2><?php echo $_SESSION['usuario']; ?></h2>
             </div>
         <nav class="menu">
             <a class="nav-link" href="#">
