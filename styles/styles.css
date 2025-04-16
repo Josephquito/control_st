@@ -150,7 +150,7 @@ a:hover {
     width: 45px;
 }
 
-.sidebar.colapsada .nav-link span, 
+.sidebar.colapsada .nav-link span:not(.tooltip-text), 
 .sidebar.colapsada .sidebar-header h2 {
     display: none !important;
 }
