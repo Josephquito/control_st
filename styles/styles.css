@@ -122,8 +122,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* MENU SIDEBAR */
-
 .home-body {
     display: flex;
     min-height: 100vh;
@@ -142,24 +140,17 @@ a:hover {
     overflow: hidden;
 }
 
-.sidebar-header h2{
+.sidebar.colapsada {
+    width: 60px;
+}
+
+.sidebar-header h2 {
     margin-bottom: 30px;
     font-weight: bold;
 }
-.sidebar.colapsada {
-    width: 45px;
-}
 
-.sidebar.colapsada .nav-link > span:not(.tooltip-text),
 .sidebar.colapsada .sidebar-header h2 {
     display: none !important;
-}
-
-.icon {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
-    margin-right: 20px;
 }
 
 .nav-link {
@@ -171,37 +162,41 @@ a:hover {
     color: #333;
 }
 
-.nav-link .tooltip-text {
-    display: inline-block;
-    margin-left: 10px;
-    transition: opacity 0.3s ease;
-}
-
 .sidebar.colapsada .nav-link {
     justify-content: center;
-    position: relative;
 }
 
-.sidebar.colapsada .nav-link .tooltip-text {
+.icon {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+/* Tooltip base */
+.tooltip-text {
     position: absolute;
-    left: 55px;
+    left: 60px;
     top: 50%;
     transform: translateY(-50%);
     background-color: #333;
     color: #fff;
-    padding: 6px 12px;
+    padding: 5px 10px;
     border-radius: 4px;
+    font-size: 13px;
     white-space: nowrap;
     opacity: 0;
-    pointer-events: none;
-    font-size: 13px;
-    z-index: 10;
     visibility: hidden;
     transition: all 0.3s ease;
+    z-index: 100;
 }
 
+/* Mostrar el tooltip SOLO cuando sidebar esté colapsado y hay hover */
 .sidebar.colapsada .nav-link:hover .tooltip-text {
     opacity: 1;
     visibility: visible;
-    left: 60px;
+}
+
+/* Oculta el texto regular del menú, pero NO el tooltip */
+.sidebar.colapsada .nav-link > span:not(.tooltip-text) {
+    display: none !important;
 }
