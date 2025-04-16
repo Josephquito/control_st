@@ -31,7 +31,7 @@ if (!isset($_SESSION['usuario'])) {
                 <img src="../assets/notificaciones.png" alt="Notificaciones" class="icon"> Notificaciones
             </a>
             <a class="nav-link" href="#">
-                <img src="../assets/clinetes.png" alt="Clientes" class="icon"> Clientes
+                <img src="../assets/clientes.png" alt="Clientes" class="icon"> Clientes
             </a>
             <a class="nav-link" href="#">
                 <img src="../assets/ganancias.png" alt="Ganancias" class="icon"> Ganancias
