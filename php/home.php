@@ -24,13 +24,13 @@ if (!isset($_SESSION['usuario'])) {
             <a class="nav-link" href="#">
                 <img src="../assets/inicio.png" alt="Inicio" class="icon"> Inicio
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" data-colapsar="true">
                 <img src="../assets/cuentas.png" alt="Cuentas" class="icon"> Cuentas
             </a>
             <a class="nav-link" href="#">
                 <img src="../assets/notificaciones.png" alt="Notificaciones" class="icon"> Notificaciones
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" data-colapsar="true">
                 <img src="../assets/clientes.png" alt="Clientes" class="icon"> Clientes
             </a>
             <a class="nav-link" href="#">
@@ -43,5 +43,6 @@ if (!isset($_SESSION['usuario'])) {
                 </a>
             </div>
         </div>
+        <script src="scripts/scripts.js"></script>
     </body>
 </html>

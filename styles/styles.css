@@ -138,11 +138,20 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     border-right: 1px solid #e0e0e0;
+    transition: width 0.3s ease;
+    overflow: hidden;
 }
 
 .sidebar-header h2{
     margin-bottom: 30px;
     font-weight: bold;
+}
+.sidebar.colapsada {
+    width: 60px;
+}
+
+.sidebar-colapsada .nav-link span, .sidebar-colapsada .sidebar-bottom h2 {
+    display: none;
 }
 
 .icon {
