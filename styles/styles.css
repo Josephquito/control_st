@@ -146,6 +146,13 @@ a:hover {
     font-weight: bold;
 }
 
+.icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
 .menu, .sidebar-bottom {
     display: flex;
     flex-direction: column;
