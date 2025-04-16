@@ -139,6 +139,13 @@ a:hover {
     border-right: 1px solid #e0e0e0;
     transition: width 0.3s ease;
     overflow: visible;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    z-index: 100;
 }
 
 .sidebar.colapsada {
@@ -257,7 +264,13 @@ a:hover {
 ========================================== */
 
 .contenido {
-    flex-grow: 1;
+    margin-left: 220px;
     padding: 40px;
-    text-align: center;
-} 
+    width: calc(100% - 220px);
+    transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.sidebar.colapsada + .contenido {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+}

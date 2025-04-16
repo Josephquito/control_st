@@ -19,6 +19,7 @@ if (!isset($_SESSION['usuario'])) {
         <?php include('sidebar.php'); ?>
         <main class="contenido">
         <h1>Inicio</h1>
+        <p>Bienvenido a la plataforma...</p>
         </main>
         <script src="../scripts/scripts.js"></script>
     </body>
