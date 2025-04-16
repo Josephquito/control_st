@@ -142,19 +142,22 @@ a:hover {
     overflow: hidden;
 }
 
-.sidebar-header h2{
+.sidebar-header h2 {
     margin-bottom: 30px;
     font-weight: bold;
 }
+
 .sidebar.colapsada {
     width: 45px;
 }
 
+/* Oculta texto pero no el tooltip */
 .sidebar.colapsada .nav-link > span:not(.tooltip-text),
 .sidebar.colapsada .sidebar-header h2 {
     display: none !important;
 }
 
+/* Íconos */
 .icon {
     width: 35px;
     height: 35px;
@@ -162,6 +165,7 @@ a:hover {
     margin-right: 20px;
 }
 
+/* Enlace de navegación */
 .nav-link {
     position: relative;
     display: flex;
@@ -171,20 +175,10 @@ a:hover {
     color: #333;
 }
 
-.nav-link .tooltip-text {
-    display: inline-block;
-    margin-left: 10px;
-    transition: opacity 0.3s ease;
-}
-
-.sidebar.colapsada .nav-link {
-    justify-content: center;
-    position: relative;
-}
-
-.sidebar.colapsada .nav-link .tooltip-text {
+/* Tooltip base (oculto por defecto) */
+.tooltip-text {
     position: absolute;
-    left: 55px;
+    left: 60px;
     top: 50%;
     transform: translateY(-50%);
     background-color: #333;
@@ -200,8 +194,13 @@ a:hover {
     transition: all 0.3s ease;
 }
 
+/* Solo cuando sidebar está colapsado */
+.sidebar.colapsada .nav-link {
+    justify-content: center;
+}
+
+/* Mostrar tooltip al hacer hover */
 .sidebar.colapsada .nav-link:hover .tooltip-text {
     opacity: 1;
     visibility: visible;
-    left: 60px;
 }
