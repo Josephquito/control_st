@@ -139,7 +139,7 @@ a:hover {
     border-right: 1px solid #e0e0e0;
     transition: width 0.3s ease;
     overflow: visible;
-
+    padding-bottom: 40px;
     position: fixed;
     top: 0;
     left: 0;
@@ -237,7 +237,7 @@ a:hover {
 .dropdown-menu {
     position: absolute;
     left: 100%;
-    top: 0;
+    top: -10px; /* o prueba con top: 10px; */
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 5px 0;
