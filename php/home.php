@@ -52,7 +52,7 @@ if (!isset($_SESSION['usuario'])) {
                 <span class="text-label">Más</span>
                 <span class="tooltip-text">Más</span>
 
-                <div>
+                <div class="dropdown-menu" id="menu-mas">
                     <a href="#" class="dropdown-item">Mi Perfil</a>
                     <a href="../php/logout.php" class="dropdown-item">Cerrar sesión</a>
                 </div>
