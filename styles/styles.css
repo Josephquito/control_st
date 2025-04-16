@@ -173,6 +173,10 @@ a:hover {
 }
 
 /* Tooltip base */
+.text-label {
+    margin-left: 10px;
+}
+
 .tooltip-text {
     position: absolute;
     left: 60px;
@@ -197,6 +201,6 @@ a:hover {
 }
 
 /* Oculta el texto regular del menú, pero NO el tooltip */
-.sidebar.colapsada .nav-link > span:not(.tooltip-text) {
+.sidebar.colapsada .text-label {
     display: none !important;
 }

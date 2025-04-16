@@ -23,28 +23,34 @@ if (!isset($_SESSION['usuario'])) {
         <nav class="menu">
             <a class="nav-link" href="#">
                 <img src="../assets/inicio.png" alt="Inicio" class="icon"> 
+                <span class="text-label">Inicio</span>
                 <span class="tooltip-text">Inicio</spann>
             </a>
             <a class="nav-link" href="#" data-colapsar="true">
                 <img src="../assets/cuentas.png" alt="Cuentas" class="icon"> 
+                <span class="text-label">Cuentas</span>
                 <span class="tooltip-text">Cuentas</span>
             </a>
             <a class="nav-link" href="#">
                 <img src="../assets/notificaciones.png" alt="Notificaciones" class="icon"> 
+                <span class="text-label">Notificaciones</span>
                 <span class="tooltip-text">Notificaciones</span>
             </a>
             <a class="nav-link" href="#" data-colapsar="true">
                 <img src="../assets/clientes.png" alt="Clientes" class="icon"> 
+                <span class="text-label">Clientes</span>
                 <span class="tooltip-text">Clientes</span>
             </a>
             <a class="nav-link" href="#">
                 <img src="../assets/ganancias.png" alt="Ganancias" class="icon"> 
+                <span class="text-label">Ganancias</span>
                 <span class="tooltip-text">Ganancias</span>
             </a>
         </nav>
             <div class="sidebar-bottom">
                 <a class="nav-link" href="#">
                     <img src="../assets/menu.png" alt="Menu" class="icon"> 
+                    <span class="text-label">Más</span>
                     <span class="tooltip-text">Más</span>
                 </a>
             </div>
