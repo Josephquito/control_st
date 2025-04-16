@@ -22,10 +22,8 @@ if (!isset($_SESSION['usuario'])) {
             </div>
         <nav class="menu">
             <a class="nav-link" href="#">
-                <div class="icon-container">
-                    <img src="../assets/inicio.png" alt="Inicio" class="icon"> 
-                    <span class="tooltip-text">Inicio</spann>
-                </div>
+                <img src="../assets/inicio.png" alt="Inicio" class="icon"> 
+                <span class="tooltip-text">Inicio</spann>
             </a>
             <a class="nav-link" href="#" data-colapsar="true">
                 <img src="../assets/cuentas.png" alt="Cuentas" class="icon"> 
