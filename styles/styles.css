@@ -150,7 +150,8 @@ a:hover {
     width: 45px;
 }
 
-.sidebar-colapsada .nav-link span, .sidebar-colapsada .sidebar-bottom h2 {
+.sidebar-colapsada .nav-link span, 
+.sidebar-colapsada .sidebar-header h2 {
     display: none;
 }
 
