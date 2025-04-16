@@ -18,7 +18,7 @@ if (!isset($_SESSION['usuario'])) {
     <body class="home-body">
         <?php include('sidebar.php'); ?>
         <main class="contenido">
-        <h1>Clientes</h1>
+        <h1>Inicio</h1>
         </main>
         <script src="../scripts/scripts.js"></script>
     </body>
