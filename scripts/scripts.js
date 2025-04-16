@@ -7,10 +7,10 @@ function irAregister (){
 }
 
 const sidebar = document.getElementById("sidebar");
-const links = document.getSelectorAll(".nav.link");
+const links = document.querySelectorAll(".nav-link");
 
 links.forEach(link => {
-    link.addEventListener("Click", function (e) {
+    link.addEventListener("click", function (e) {
         const colapsar = this.getAttribute("data-colapsar");
 
         if (colapsar=="true") {
