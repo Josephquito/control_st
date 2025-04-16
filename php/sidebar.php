@@ -3,7 +3,7 @@
                 <h2><?php echo $_SESSION['usuario']; ?></h2>
             </div>
         <nav class="menu">
-            <a class="nav-link" href="/home.php">
+            <a class="nav-link" href="home.php">
                 <img src="../assets/inicio.png" alt="Inicio" class="icon"> 
                 <span class="text-label">Inicio</span>
                 <span class="tooltip-text">Inicio</spann>
