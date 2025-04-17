@@ -71,3 +71,18 @@ window.onclick = function(event) {
         modal.style.display = 'none';
     }
 }
+
+function mostrarModal(perfil) {
+    document.getElementById('modalPerfil').style.display = 'block';
+  }
+
+  function cerrarModal() {
+    document.getElementById('modalPerfil').style.display = 'none';
+  }
+
+  window.onclick = function(e) {
+    const modal = document.getElementById('modalPerfil');
+    if (e.target === modal) {
+      cerrarModal();
+    }
+  }

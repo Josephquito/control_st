@@ -78,13 +78,49 @@ foreach ($plataformas as $p) {
                     <button type="submit" class="btn-eliminar">Confirmar y eliminar</button>
                 </form>
             </div>
-        </div>        
+        </div>    
         
         <main class="contenido">
         <h1><?= $plataforma_actual ?></h1>
         <?php if ($plataforma_id): ?>            
              <button class="btn-eliminar" onclick="abrirModalEliminar()">🗑️ Eliminar plataforma</button>
         <?php endif; ?>
+        <h1>Tabla de Perfiles</h1>
+  <table>
+    <tr>
+      <th>Correo</th>
+      <th>Clave</th>
+      <th>1clien</th>
+      <th>Proveedor</th>
+      <th>Corte</th>
+      <th>Aviso</th>
+    </tr>
+    <tr>
+      <td>xd@jotavix.com</td>
+      <td>123456</td>
+      <td><button class="perfil-btn" onclick="mostrarModal('1clien')">1clien<br>3 días</button></td>
+      <td>cockcy</td>
+      <td>10/05/25</td>
+      <td>23 días</td>
+    </tr>
+  </table>
+
+  <!-- Modal -->
+  <div id="modalPerfil" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+      <h3>Información de perfil</h3>
+      <p><strong>Cliente:</strong> +593 98 000 0000</p>
+      <p><strong>Precio:</strong> $3.50</p>
+      <p><strong>Inicio:</strong> 01/04/2025</p>
+      <p><strong>Corte:</strong> 01/05/2025</p>
+      <p><strong>Días restantes:</strong> 23</p>
+      <p><strong>Observaciones:</strong> Buen cliente</p>
+      <button>Editar</button>
+      <button>Renovar</button>
+      <button style="background-color:#e74c3c">Eliminar</button>
+    </div>
+  </div>
         </main>
         <script src="../scripts/scripts.js"></script>
     </body>
