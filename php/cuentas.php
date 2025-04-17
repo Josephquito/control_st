@@ -74,9 +74,7 @@ foreach ($plataformas as $p) {
         <?php if ($plataforma_id): ?>
             <form action="eliminar_plataforma.php" method="POST" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta plataforma?');" style="margin-top: 30px;">
                 <input type="hidden" name="plataforma_id" value="<?= $plataforma_id ?>">
-                <button type="submit" style="padding: 10px 20px; background-color: #e53935; color: white; border: none; border-radius: 8px; cursor: pointer;">
-                    🗑️ Eliminar plataforma
-                </button>
+                <button type="submit" class="btn-eliminar">🗑️ Eliminar plataforma</button>
             </form>
         <?php endif; ?>
         </main>
