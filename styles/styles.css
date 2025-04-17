@@ -333,6 +333,12 @@ a:hover {
     min-width: 120px;  /* 👈 define un tamaño base bonito */
     display: inline-block;
 }
+
+.boton-plataforma:hover {
+    background-color: rgb(149, 149, 149);
+    color: rgb(255, 255, 255);
+}
+
 /* ==========================================
    CONTENIDO DE LAS PAGINAS
 ========================================== */
