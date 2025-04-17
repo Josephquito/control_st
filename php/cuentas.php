@@ -20,6 +20,11 @@ $plataformas = [];
 while ($fila = $resultado->fetch_assoc()) {
     $plataformas[] = $fila;
 }
+$sql = "SELECT * FROM cuentas WHERE usuario_id = ? AND plataforma_id = ?";
+$stmt = $conexion->prepare($sql);
+$stmt->bind_param("ii", $usuario_id, $plataforma_id);
+$stmt->execute();
+$cuentas = $stmt->get_result();
 
 $plataforma_id = $_GET['plataforma_id'] ?? ($plataformas[0]['id'] ?? null);
 $plataforma_actual = '';
@@ -86,41 +91,37 @@ foreach ($plataformas as $p) {
              <button class="btn-eliminar" onclick="abrirModalEliminar()">🗑️ Eliminar plataforma</button>
         <?php endif; ?>
         <h1>Tabla de Perfiles</h1>
-  <table>
-    <tr>
-      <th>Correo</th>
-      <th>Clave</th>
-      <th>1clien</th>
-      <th>Proveedor</th>
-      <th>Corte</th>
-      <th>Aviso</th>
-    </tr>
-    <tr>
-      <td>xd@jotavix.com</td>
-      <td>123456</td>
-      <td><button class="perfil-btn" onclick="mostrarModal('1clien')">1clien<br>3 días</button></td>
-      <td>cockcy</td>
-      <td>10/05/25</td>
-      <td>23 días</td>
-    </tr>
-  </table>
-
-  <!-- Modal -->
-  <div id="modalPerfil" class="modal">
-    <div class="modal-contenido">
-      <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
-      <h3>Información de perfil</h3>
-      <p><strong>Cliente:</strong> +593 98 000 0000</p>
-      <p><strong>Precio:</strong> $3.50</p>
-      <p><strong>Inicio:</strong> 01/04/2025</p>
-      <p><strong>Corte:</strong> 01/05/2025</p>
-      <p><strong>Días restantes:</strong> 23</p>
-      <p><strong>Observaciones:</strong> Buen cliente</p>
-      <button>Editar</button>
-      <button>Renovar</button>
-      <button style="background-color:#e74c3c">Eliminar</button>
-    </div>
-  </div>
+        <table class="tabla-cuentas">
+        <thead>
+            <tr>
+                <th>Correo</th>
+                <th>Clave</th>
+                <th>Perfiles</th>
+                <th>Proveedor</th>
+                <th>Corte</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php while ($cuenta = $cuentas->fetch_assoc()): ?>
+                <tr>
+                    <td><?= $cuenta['correo'] ?></td>
+                    <td><?= $cuenta['clave'] ?></td>
+                    <td>
+                        <button class="perfil-btn">1: <?= $cuenta['perfil1'] ?></button>
+                        <button class="perfil-btn">2: <?= $cuenta['perfil2'] ?></button>
+                        <!-- etc -->
+                    </td>
+                    <td><?= $cuenta['proveedor'] ?></td>
+                    <td><?= $cuenta['fecha_corte'] ?></td>
+                    <td>
+                        <button>🖊️ Editar</button>
+                        <button>🗑️ Eliminar</button>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
+        </tbody>
+    </table>
         </main>
         <script src="../scripts/scripts.js"></script>
     </body>
