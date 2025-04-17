@@ -320,6 +320,19 @@ a:hover {
     text-align: center;
     align-self: center;
 }
+
+.boton-plataforma button {
+    background-color: #337ded;
+    color: white;
+    padding: 8px 18px; /* 👈 reduce el padding */
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    width: auto;       /* 👈 evita que se expanda demasiado */
+    min-width: 120px;  /* 👈 define un tamaño base bonito */
+    display: inline-block;
+}
 /* ==========================================
    CONTENIDO DE LAS PAGINAS
 ========================================== */
