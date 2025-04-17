@@ -38,3 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.remove('colapsada');
     }
 });
+
+const btnAbrir = document.querySelector(".boton-plataforma button");
+const modal = document.getElementsBy("modal-plataforma");
+const cerrar = document.getElementById("cerrar-modal");
+
+btnAbrir.addEventListener("click", () => {
+    modal.style.display = "block";
+});
+
+cerrar.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target == modal) {
+        modal.style.display = "none";
+    }
+});

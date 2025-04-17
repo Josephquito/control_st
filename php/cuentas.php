@@ -55,7 +55,18 @@ foreach ($plataformas as $p){
                 <button>+ Plataforma</button>
             </div>    
         </aside>
-
+        
+        <div id="modal-plataforma" class="modal">
+            <div class="modal-contenido"> 
+                <span class="cerrar-modal" id="cerrar-modal">&times;</span>
+                <h2>Agregar nueva plataforma</h2>
+                <form action="agregar_plataforma.php" method="POST">
+                    <input type="text" name="nombre" placeholder="Nombre de la plataforma" required>
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+        
         <main class="contenido">
         <h1><?= $plataforma_actual ?></h1>
         </main>

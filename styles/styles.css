@@ -349,3 +349,52 @@ a:hover {
     width: calc(100% - 220px);
     transition: margin-left 0.3s ease, width 0.3s ease;
 }
+
+/* ==========================================
+   CONTENIDO PARA MODAL + PLATAFORMA
+========================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-contenido {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .modal-contenido input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-contenido button {
+    background-color: #0071e3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .cerrar-modal {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
