@@ -56,3 +56,18 @@ window.addEventListener("click", (e) => {
         modal.style.display = "none";
     }
 });
+
+function abrirModalEliminar() {
+    document.getElementById('modal-eliminar').style.display = 'block';
+}
+
+function cerrarModalEliminar() {
+    document.getElementById('modal-eliminar').style.display = 'none';
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('modal-eliminar');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}

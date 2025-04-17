@@ -68,14 +68,22 @@ foreach ($plataformas as $p) {
                 </form>
             </div>
         </div>
+        <div id="modal-eliminar" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar-modal" onclick="cerrarModalEliminar()">&times;</span>
+                <h2>Confirma tu contraseña</h2>
+                <form action="eliminar_plataforma.php" method="POST">
+                    <input type="hidden" name="plataforma_id" value="<?= $plataforma_id ?>">
+                    <input type="password" name="password" placeholder="Tu contraseña" required>
+                    <button type="submit" class="btn-eliminar">Confirmar y eliminar</button>
+                </form>
+            </div>
+        </div>        
         
         <main class="contenido">
         <h1><?= $plataforma_actual ?></h1>
-        <?php if ($plataforma_id): ?>
-            <form action="eliminar_plataforma.php" method="POST" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta plataforma?');" style="margin-top: 30px;">
-                <input type="hidden" name="plataforma_id" value="<?= $plataforma_id ?>">
-                <button type="submit" class="btn-eliminar">🗑️ Eliminar plataforma</button>
-            </form>
+        <?php if ($plataforma_id): ?>            
+             <button class="btn-eliminar" onclick="abrirModalEliminar()">🗑️ Eliminar plataforma</button>
         <?php endif; ?>
         </main>
         <script src="../scripts/scripts.js"></script>
