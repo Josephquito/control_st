@@ -334,7 +334,7 @@ a:hover {
     display: inline-block;
 }
 
-.boton-plataforma:hover {
+.boton-plataforma button:hover {
     background-color: rgb(149, 149, 149);
     color: rgb(255, 255, 255);
 }
