@@ -1,28 +1,30 @@
 <?php 
 session_start();
+include('conexion.php');
 
-if (!isset($_SESSION['usuario'])) {
+if (!isset($_SESSION['usuario_id'])) {
     header("Location: ../login.html");
     exit();
 }
 
-$plataformas = [
-    ["id" => 1, "nombre" => "Canva"],
-    ["id" => 2, "nombre" => "Crunchyroll"],
-    ["id" => 3, "nombre" => "Disney"],
-    ["id" => 4, "nombre" => "Flujo TV"],
-    ["id" => 5, "nombre" => "IPTV"],
-    ["id" => 6, "nombre" => "Max"],
-    ["id" => 7, "nombre" => "Netflix"],
-    ["id" => 8, "nombre" => "Prime Video"],
-    ["id" => 9, "nombre" => "Spotify"],
-    ["id" => 10, "nombre" => "YouTube"]
-];
+$usuario_id = $_SESSION['usuario_id'];
 
-$plataforma_id = $_GET['plataforma_id']?? $plataformas[0]['id'];
+$sql = "SELECT id, nombre FROM plataformas WHERE usuario_id = ?";
+$stmt = $conexion->prepare($sql);
+$stmt->bind_param("i", $usuario_id);
+$stmt->execute();
+$resultado = $stmt->get_result();
+
+$plataformas = [];
+
+while ($fila = $resultado->fetch_assoc()) {
+    $plataformas[] = $fila;
+}
+
+$plataforma_id = $_GET['plataforma_id'] ?? ($plataformas[0]['id'] ?? null);
 $plataforma_actual = '';
 
-foreach ($plataformas as $p){
+foreach ($plataformas as $p) {
     if ($p['id'] == $plataforma_id) {
         $plataforma_actual = $p['nombre'];
         break;
