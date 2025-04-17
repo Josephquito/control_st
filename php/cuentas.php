@@ -18,7 +18,7 @@ if (!isset($_SESSION['usuario'])) {
     <body class="home-body">
         <?php include('sidebar.php'); ?>
         <!-- Sidebar de plataformas -->
-        <aside class="sidebar-plataformas"
+        <aside class="sidebar-plataformas">
             <ul class="plataforma-lista">
               <li class="plataforma activa">Canva</li>
               <li class="plataforma">Crunchyroll</li>
