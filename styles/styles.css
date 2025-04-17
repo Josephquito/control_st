@@ -375,8 +375,16 @@ a:hover {
     border-radius: 10px;
     text-align: center;
   }
-  
+
+  .modal-contenido h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap; 
+  }
+
   .modal-contenido input {
+    margin-top: 10px;
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
