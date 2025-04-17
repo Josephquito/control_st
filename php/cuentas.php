@@ -5,7 +5,32 @@ if (!isset($_SESSION['usuario'])) {
     header("Location: ../login.html");
     exit();
 }
+
+$plataformas = [
+    ["id" => 1, "nombre" => "Canva"],
+    ["id" => 2, "nombre" => "Crunchyroll"],
+    ["id" => 3, "nombre" => "Disney"],
+    ["id" => 4, "nombre" => "Flujo TV"],
+    ["id" => 5, "nombre" => "IPTV"],
+    ["id" => 6, "nombre" => "Max"],
+    ["id" => 7, "nombre" => "Netflix"],
+    ["id" => 8, "nombre" => "Prime Video"],
+    ["id" => 9, "nombre" => "Spotify"],
+    ["id" => 10, "nombre" => "YouTube"]
+];
+
+$plataforma_id = $_GET['plataforma_id']?? $plataformas[0]['id'];
+$plataforma_actual = '';
+
+foreach ($plataformas as $p){
+    if ($p['id'] == $plataforma_id) {
+        $plataforma_actual = $p['nombre'];
+        break;
+    }
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -20,23 +45,19 @@ if (!isset($_SESSION['usuario'])) {
         <!-- Sidebar de plataformas -->
         <aside class="sidebar-plataformas">
             <ul class="plataforma-lista">
-              <li class="plataforma activa">Canva</li>
-              <li class="plataforma">Crunchyroll</li>
-              <li class="plataforma">Disney</li>  
-              <li class="plataforma">Flujo Tv</li>  
-              <li class="plataforma">IPTV</li>  
-              <li class="plataforma">Max</li>  
-              <li class="plataforma">Netflix</li>  
-              <li class="plataforma">Prime Video</li>  
-              <li class="plataforma">Spotify</li>  
-              <li class="plataforma">Youtube</li>    
+                <?php foreach ($plataformas as $p): ?>
+                    <li class="plataforma <?= $p['id'] == $plataforma_id ? 'activa' : '' ?>">
+                        <a href="?plataforma_id=<?= $p['id'] ?>"><?= $p['nombre'] ?></a>
+                    </li>
+                <?php endforeach; ?>    
             </ul>
             <div class="boton-plataforma">
                 <button>+ Plataforma</button>
             </div>    
         </aside>
+
         <main class="contenido">
-        <h1>Cuentas</h1>
+        <h1><?= $plataforma_actual ?></h1>
         </main>
         <script src="../scripts/scripts.js"></script>
     </body>

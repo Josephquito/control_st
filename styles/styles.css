@@ -237,7 +237,7 @@ a:hover {
 .dropdown-menu {
     position: absolute;
     left: 100%;
-    top: -10px; /* o prueba con top: 10px; */
+    top: -10px;
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 5px 0;
@@ -324,13 +324,13 @@ a:hover {
 .boton-plataforma button {
     background-color: #337ded;
     color: white;
-    padding: 8px 18px; /* 👈 reduce el padding */
+    padding: 8px 18px; 
     border-radius: 20px;
     border: none;
     cursor: pointer;
     font-size: 14px;
-    width: auto;       /* 👈 evita que se expanda demasiado */
-    min-width: 120px;  /* 👈 define un tamaño base bonito */
+    width: auto;  
+    min-width: 120px; 
     display: inline-block;
 }
 
