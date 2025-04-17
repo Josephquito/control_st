@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const btnAbrir = document.querySelector(".boton-plataforma button");
-const modal = document.getElementsBy("modal-plataforma");
+const modal = document.getElementById("modal-plataforma");
 const cerrar = document.getElementById("cerrar-modal");
 
 btnAbrir.addEventListener("click", () => {
