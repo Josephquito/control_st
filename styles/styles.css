@@ -263,6 +263,51 @@ a:hover {
 .sidebar.colapsada .dropdown-menu {
     left: 60px;
 }
+/* ==========================================
+   SIDEBAR DE CUNETAS
+========================================== */
+
+.sidebar-plataformas {
+    width: 200px;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 60px;
+    z-index: 90;
+    overflow-y: auto;
+}
+
+.sidebar.colapsada + .sidebar-plataformas {
+    left: 60px;
+}
+
+.sidebar + .sidebar-plataformas {
+    left: 220px;
+}
+
+.plataforma-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plataforma {
+    margin-bottom: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.plataforma:hover {
+    color: #0071e3;
+}
+
+.plataforma.activa {
+    font-weight: bold;
+}
 
 /* ==========================================
    CONTENIDO DE LAS PAGINAS

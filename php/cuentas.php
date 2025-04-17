@@ -17,6 +17,24 @@ if (!isset($_SESSION['usuario'])) {
     </head>
     <body class="home-body">
         <?php include('sidebar.php'); ?>
+        <!-- Sidebar de plataformas -->
+        <aside class="sidebar-plataformas"
+            <ul class="plataforma-lista">
+              <li class="plataforma activa">Canva</li>
+              <li class="plataforma">Crunchyroll</li>
+              <li class="plataforma">Disney</li>  
+              <li class="plataforma">Flujo Tv</li>  
+              <li class="plataforma">IPTV</li>  
+              <li class="plataforma">Max</li>  
+              <li class="plataforma">Netflix</li>  
+              <li class="plataforma">Prime Video</li>  
+              <li class="plataforma">Spotify</li>  
+              <li class="plataforma">Youtube</li>    
+            </ul>
+            <div>
+                <button>+ Plataforma</button>
+            </div>    
+        </aside>
         <main class="contenido">
         <h1>Cuentas</h1>
         </main>
