@@ -12,11 +12,6 @@ $plataformas = [
     ["id" => 3, "nombre" => "Disney"],
     ["id" => 4, "nombre" => "Flujo TV"],
     ["id" => 5, "nombre" => "IPTV"],
-    ["id" => 6, "nombre" => "Max"],
-    ["id" => 7, "nombre" => "Netflix"],
-    ["id" => 8, "nombre" => "Prime Video"],
-    ["id" => 9, "nombre" => "Spotify"],
-    ["id" => 10, "nombre" => "YouTube"]
 ];
 
 $plataforma_id = $_GET['plataforma_id']?? $plataformas[0]['id'];
