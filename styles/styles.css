@@ -264,20 +264,23 @@ a:hover {
     left: 60px;
 }
 /* ==========================================
-   SIDEBAR DE CUNETAS
+   SIDEBAR DE CUENTAS
 ========================================== */
 
 .sidebar-plataformas {
     width: 200px;
     background-color: #fff;
     border-right: 1px solid #e0e0e0;
-    padding: 20px;
+    padding: 0 20px;
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 60px;
+    left: 220px;
     z-index: 90;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sidebar.colapsada + .sidebar-plataformas {
@@ -292,13 +295,16 @@ a:hover {
     list-style: none;
     padding: 0;
     margin: 0;
+    align-items: flex-start;
 }
 
 .plataforma {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-size: 16px;
     cursor: pointer;
     transition: color 0.3s ease;
+    text-align: left;
+    width: 100%;
 }
 
 .plataforma:hover {
@@ -309,6 +315,11 @@ a:hover {
     font-weight: bold;
 }
 
+.boton-plataforma {
+    margin-top: 30px;
+    text-align: center;
+    align-self: center;
+}
 /* ==========================================
    CONTENIDO DE LAS PAGINAS
 ========================================== */

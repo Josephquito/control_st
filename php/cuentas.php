@@ -31,7 +31,7 @@ if (!isset($_SESSION['usuario'])) {
               <li class="plataforma">Spotify</li>  
               <li class="plataforma">Youtube</li>    
             </ul>
-            <div>
+            <div class="boton-plataforma">
                 <button>+ Plataforma</button>
             </div>    
         </aside>
